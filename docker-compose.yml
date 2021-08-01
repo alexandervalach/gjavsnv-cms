@@ -1,0 +1,43 @@
+version: "3.3"
+services:
+  db:
+    image: mariadb:latest
+    volumes:
+      - ./database:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: gjavsnv
+      MYSQL_USER: gjavsnv
+      MYSQL_PASSWORD: gjavsnv
+
+  adminer:
+    depends_on:
+      - db
+    image: adminer:latest
+    container_name: adminer
+    environment:
+      ADMINER_DEFAULT_SERVER: mariadb
+    restart: always
+    ports:
+      - 7777:8080
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    volumes:
+      - ./html:/var/www/html
+    ports:
+      - "8080:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: gjavsnv
+      WORDPRESS_DB_PASSWORD: gjavsnv
+      WORDPRESS_DB_NAME: gjavsnv
+      WORDPRESS_DEBUG: "true"
+      
+volumes:
+  database:
+  html:

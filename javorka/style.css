@@ -1,0 +1,186 @@
+/*
+Theme Name: Javorka
+Author: Alexander Valach
+Version: 0.1
+Requires at least: 5.8
+Tested up to: 5.8
+Requires PHP: 7.4
+License: MIT License
+License URI: https://mit-license.org/
+Text Domain: javorka
+*/
+
+/* INITIAL DECLARATION */
+html {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 16px Arial, sans-serif;
+  line-height: 32px;
+}
+
+#theme-main .container {
+	max-width: 1320px;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 32px;
+	padding: 20px;
+}
+
+#theme-main .container h1 {
+	font-size: 33px;
+	line-height: 57px;
+	margin-bottom: 32px;
+}
+
+#theme-main .container .title {
+	font-size: 42px;
+	line-height: 70px;
+	margin-bottom: 32px;
+}
+
+#theme-main .container h2 {
+	font-size: 26px;
+	line-height: 47px;
+	margin-top: 52px;
+	margin-bottom: 20px;
+}
+
+#theme-main .container h3 {
+	font-size: 20px;
+	line-height: 38px;
+	margin-top: 32px;
+	margin-bottom: 12px;
+}
+
+#theme-main .container h4 {
+	font-size: 16px;
+	line-height: 32px;
+	font-weight: bold;
+	margin-bottom: 7px;
+}
+
+#theme-main .container p, #theme-main .container ul, #theme-main .container ol, #theme-main .container blockquote, #theme-main .container pre, #theme-main .container .alert, #theme-main .container .note, #theme-main .container .box, #theme-main .container .footnotes {
+	margin-bottom: 32px;
+}
+
+#theme-main .container ul, #theme-main .container ol {
+	margin-left: 32px;
+}
+
+#theme-main .container li {
+	margin-bottom: 12px;
+}
+
+#theme-main .container blockquote {
+	padding-left: 20px;
+	border-style: solid;
+	border-color: rgba(0,0,0,0.15);
+	border-width: 0 0 0 7px;
+}
+
+#theme-main .container sub, #theme-main .container sup {
+	padding: 0 1px;
+}
+
+#theme-main .container code, #theme-main .container pre, #theme-main .container kbd {
+	font-size: 15px;
+}
+
+#theme-main .container code {
+	background-color: rgba(0,0,0,0.08);
+	padding: 3px 4px;
+	border-radius: 7px;
+	margin: 0 1px;
+}
+
+#theme-main .container pre {
+	padding: 12px;
+	border-style: solid;
+	border-color: rgba(0,0,0,0.15);
+	border-width: 0 0 0 7px;
+}
+
+#theme-main .container kbd {
+	background-color: #fff;
+	padding: 3px 4px;
+	border-radius: 4px;
+	box-shadow: 0 0 4px 0 rgba(0,0,0,0.45);
+	margin: 0 1px;
+}
+
+#theme-main .container .alert, #theme-main .container .note, #theme-main .container .box {
+	padding: 20px;
+}
+
+#theme-main .container .footnotes {
+	font-size: 13px;
+	line-height: 28px;
+	padding-top: 20px;
+	border-top: 1px dotted rgba(0,0,0,0.15);
+}
+
+#theme-main .container .footnotes p {
+	margin-bottom: 20px;
+}
+
+#theme-main .container ul ul, #theme-main .container ul ol, #theme-main .container ol ul, #theme-main .container ol ol, #theme-main .container blockquote.right p, #theme-main .container blockquote.left p, #theme-main .container .alert :last-child, #theme-main .container .note :last-child, #theme-main .container .box :last-child, #theme-main .container .footnotes :last-child {
+	margin-bottom: 0;
+}
+
+@media all and (min-width: 1384px) {
+	#theme-main .container {
+		padding: 32px;
+	}
+}
+
+/* CUSTOM CLASSES */
+.bg-primary {
+  background: #017014 !important;
+}
+
+.bg-primary a,
+.bg-primary div {
+  color: #fff;
+}
+
+.bg-primary a:hover,
+.bg-primary a:active,
+.bg-primary a:focus {
+  color: #9bc971;
+}
+
+.bg-secondary {
+  background: #9bc971;
+}
+
+.text-primary {
+  color: #017014 !important;
+}
+
+.text-secondary {
+  color: #9bc971 !important;
+}
+
+/* NAVBAR */
+.navbar-brand a { 
+  text-decoration: none;
+}
+
+ul.dropdown-menu {
+  background: #9bc971;
+}
+
+ul.dropdown-menu a {
+  color: #000;
+}
+
+ul.dropdown-menu a:hover {
+  background: #017014;
+  color: #fff;
+}
