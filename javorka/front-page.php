@@ -18,18 +18,19 @@
 <!-- END: Events -->
 
 <!-- START: News -->
-<div class="container text-center">
-  <h1 class="display-4"><?php the_title(); ?></h1>
+<!-- Title for SEO and Screen Readers -->
+<div class="container text-center d-none">
+  <h1><?php echo get_bloginfo( 'name' ); ?></h1>
 </div>
 
 <div class="container">
   <div class="row">
     <?php 
-      if ( have_posts() ) : 
-          while ( have_posts() ) : the_post();
+      if ( have_posts() ): 
+          while ( have_posts() ): the_post();
           ?>
 
-          <div class="col-sm-6 col-md-4">
+          <div class="col-sm-6 col-md-4 d-flex">
             <div class="card">
               <a href="<?php the_permalink() ?>" target="_self" title="<?php _e( 'Čítaj ďalej článok ', 'javorka' ) . the_title(); ?>">
                 <?php 
@@ -53,8 +54,8 @@
 
           <?php
           endwhile;
-      else :
-          _e( 'Nijaké príspevky nevyhovujú zvoleným kritériám.', 'javorka' );
+      else:
+        _e( 'Nijaké príspevky nevyhovujú zvoleným kritériám.', 'javorka' );
       endif;
     ?>
   </div>
@@ -113,7 +114,9 @@
 <!-- START: Special powers -->
 <div class="container">
   <div class="row">
-    <div class="col-md-8 offset-md-2"></div>
+    <div class="col-sm-12 text-center">
+      <p class="lead">V čom sme iní – prečo študovať u nás?“</p>
+    </div>
   </div>
 </div>
 <!-- END: Special powers -->

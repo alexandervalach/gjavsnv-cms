@@ -60,6 +60,7 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 // Changes default excerpt ending to a custom one
 function new_excerpt_more($more) {
-  return '...<a class="read-more" style="display: block" href="' . get_permalink( get_the_ID() ) . '">Čítať ďalej</a>';
+  // return '<a class="read-more" href="' . get_permalink( get_the_ID() ) . '">&hellip;</a>';
+  return '&hellip;';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
