@@ -53,3 +53,13 @@ function lc_theme_is_livecanvas_friendly(){}
 
 // expose to the livecanvas plugin the active Bootstrap version
 function lc_theme_bootstrap_version(){return 5;}
+
+// Limits a number of characters shown in excerpt
+function custom_excerpt_length( $length ) { return 20; }
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+// Changes default excerpt ending to a custom one
+function new_excerpt_more($more) {
+  return '...<a class="read-more" style="display: block" href="' . get_permalink( get_the_ID() ) . '">Čítať ďalej</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
