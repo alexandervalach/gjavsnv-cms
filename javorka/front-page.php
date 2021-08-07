@@ -25,6 +25,7 @@
 
 <div class="container">
   <div class="row">
+    <h2 class="text-center"><?php _e( 'Aktuality' , 'javorka' ); ?></h2>
     <?php 
       if ( have_posts() ): 
           while ( have_posts() ): the_post();
@@ -38,7 +39,7 @@
                     the_post_thumbnail();
                   else: 
                 ?>
-                  <img src="<?php echo get_bloginfo( 'stylesheet_directory' ) . '/assets/images/thumbnail-default.jpg' ?>" class="card-img-top" alt="<?php the_title(); ?>">
+                  <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/thumbnail-default.jpg' ?>" class="card-img-top" alt="<?php the_title(); ?>">
                 <?php endif; ?>   
               </a>
               <div class="card-body">
@@ -55,17 +56,9 @@
           <?php
           endwhile;
       else:
-        _e( 'Nijaké príspevky nevyhovujú zvoleným kritériám.', 'javorka' );
+        _e( 'Žiadne príspevky nevyhovujú zvoleným kritériám.', 'javorka' );
       endif;
     ?>
-  </div>
-</div>
-<!-- END: News -->
-
-<!-- START: News -->
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 offset-md-2"></div>
   </div>
 </div>
 <!-- END: News -->
@@ -74,13 +67,14 @@
 <div class="container">
   <div class="row">
 
+    <h2 class="text-center"><?php _e( 'Pre uchádzačov' , 'javorka' ); ?></h2>
+
     <div class="col-sm-6 col-md-4">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title"><?php _e( 'Bilingválne štúdium', 'javorka' ); ?></h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
+          <a href="#" class="card-link"><?php _e( 'Viac o bilingválnom štúdiu', 'javorka' ); ?></a>
         </div>
       </div>
     </div>
@@ -90,8 +84,7 @@
         <div class="card-body">
           <h5 class="card-title"><?php _e( '8-ročné štúdium', 'javorka' ); ?></h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
+          <a href="#" class="card-link"><?php _e( 'Viac o 8-ročnom štúdiu', 'javorka' ); ?></a>
         </div>
       </div>
     </div>
@@ -101,8 +94,7 @@
         <div class="card-body">
           <h5 class="card-title"><?php _e( 'Prestupy', 'javorka' ); ?></h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
+          <a href="#" class="card-link"><?php _e( 'Viac o prestupoch', 'javorka' ); ?></a>
         </div>
       </div>
     </div>
@@ -115,7 +107,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12 text-center">
-      <p class="lead">V čom sme iní – prečo študovať u nás?“</p>
+      <h2><?php _e( 'V čom sme iní – prečo študovať u nás?', 'javorka' ); ?></h2>
     </div>
   </div>
 </div>
@@ -124,7 +116,17 @@
 <!-- START: Social networks -->
 <div class="container">
   <div class="row">
-    <div class="col-md-8 offset-md-2"></div>
+    <div class="col-sm-12 text-center">
+      <h2><?php _e( 'Nájdete nás aj na sociálnych sieťach', 'javorka' ); ?></h2>
+      
+      <a href="https://www.facebook.com/javorka16" target="_blank" title="<?php _e( 'Prejsť na Facebook stránku Javorky', 'javorka' ) ?>">
+        <img width="50px" src="<?php echo get_template_directory_uri() . '/assets/images/facebook-logo.svg' ?>" class="mx-auto d-inline-block" alt="<?php _e( 'Facebook logo', 'javorka' ) ?>">
+      </a>
+
+      <a href="https://www.instagram.com/javorka.official/" target="_blank" title="<?php _e( 'Prejsť na Instagram stránku Javorky', 'javorka' ) ?>">
+        <img width="50px" src="<?php echo get_template_directory_uri() . '/assets/images/instagram-logo.svg' ?>" class="mx-auto d-inline-block" alt="<?php _e( 'Instagram logo', 'javorka' ) ?>">
+      </a>
+    </div>
   </div>
 </div>
 <!-- END: Social networks -->

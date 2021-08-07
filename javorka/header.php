@@ -89,4 +89,4 @@
     } // END ELSE CASE 
     ?>
 
-<main id='theme-main'>
+<main id='theme-main' style="min-height: 75vh;">
