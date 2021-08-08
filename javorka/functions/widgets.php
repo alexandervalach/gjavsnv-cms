@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
  */
 add_filter( 'dynamic_sidebar_params', 'javorka_widget_classes' );
 
-if ( ! function_exists( 'javorka_widget_classes' ) ) {
+if ( !function_exists( 'javorka_widget_classes' ) ) {
 
 	/**
 	 * Count number of visible widgets in a sidebar and add classes to widgets accordingly,
@@ -75,111 +75,31 @@ if ( ! function_exists( 'javorka_widget_classes' ) ) {
 
 add_action( 'widgets_init', 'javorka_widgets_init' );
 
-if ( ! function_exists( 'javorka_widgets_init' ) ) {
+if ( !function_exists( 'javorka_widgets_init' ) ) {
 	/**
 	 * Initializes themes widgets.
 	 */
 	function javorka_widgets_init() {
-		/*
-		register_sidebar(
-			array(
-				'name'          => __( 'Right Sidebar', 'javorka' ),
-				'id'            => 'right-sidebar',
-				'description'   => __( 'Right sidebar widget area', 'javorka' ),
-				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</aside>',
-				'before_title'  => '<h3 class="widget-title">',
-				'after_title'   => '</h3>',
-			)
-		);
-
-		register_sidebar(
-			array(
-				'name'          => __( 'Left Sidebar', 'javorka' ),
-				'id'            => 'left-sidebar',
-				'description'   => __( 'Left sidebar widget area', 'javorka' ),
-				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</aside>',
-				'before_title'  => '<h3 class="widget-title">',
-				'after_title'   => '</h3>',
-			)
-		);
-
-		register_sidebar(
-			array(
-				'name'          => __( 'Hero Slider', 'javorka' ),
-				'id'            => 'hero',
-				'description'   => __( 'Hero slider area. Place two or more widgets here and they will slide!', 'javorka' ),
-				'before_widget' => '<div class="carousel-item">',
-				'after_widget'  => '</div>',
-				'before_title'  => '',
-				'after_title'   => '',
-			)
-		);
-
-		register_sidebar(
-			array(
-				'name'          => __( 'Hero Canvas', 'javorka' ),
-				'id'            => 'herocanvas',
-				'description'   => __( 'Full size canvas hero area for Bootstrap and other custom HTML markup', 'javorka' ),
-				'before_widget' => '',
-				'after_widget'  => '',
-				'before_title'  => '',
-				'after_title'   => '',
-			)
-		);
-
-		register_sidebar(
-			array(
-				'name'          => __( 'Top Full', 'javorka' ),
-				'id'            => 'statichero',
-				'description'   => __( 'Full top widget with dynamic grid', 'javorka' ),
-				'before_widget' => '<div id="%1$s" class="static-hero-widget %2$s dynamic-classes">',
-				'after_widget'  => '</div><!-- .static-hero-widget -->',
-				'before_title'  => '<h3 class="widget-title">',
-				'after_title'   => '</h3>',
-			)
-		);
-		*/
-
-		register_sidebar(
-			array(
-				'name'          => __( 'Main Sidebar', 'javorka' ),
-				'id'            => 'main-sidebar',
-				'description'   => __( 'Main sidebar widget area', 'javorka' ),
-				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</aside>',
-				'before_title'  => '<h3 class="widget-title">',
-				'after_title'   => '</h3>',
-			)
-		);
+		register_sidebar([
+      'name'          => __( 'Main Sidebar', 'javorka' ),
+      'id'            => 'main-sidebar',
+      'description'   => __( 'Main sidebar widget area', 'javorka' ),
+      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+      'after_widget'  => '</aside>',
+      'before_title'  => '<h3 class="widget-title">',
+      'after_title'   => '</h3>'
+    ]);
 
 		
-		register_sidebar(
-			array(
-				'name'          => __( 'Footer Full', 'javorka' ),
-				'id'            => 'footerfull',
-				'description'   => __( 'Full sized footer widget with dynamic grid', 'javorka' ),
-				'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes">',
-				'after_widget'  => '</div><!-- .footer-widget -->',
-				'before_title'  => '<h3 class="widget-title">',
-				'after_title'   => '</h3>',
-			)
-		);
-
-		if ( class_exists( 'woocommerce' ) ) 
-		register_sidebar(
-			array(
-				'name'          => __( 'WooCommerce Shop Sidebar', 'javorka' ),
-				'id'            => 'wc-sidebar',
-				'description'   => __( 'Shop sidebar widget area', 'javorka' ),
-				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</aside>',
-				'before_title'  => '<h3 class="widget-title">',
-				'after_title'   => '</h3>',
-			)
-		);
-
+		register_sidebar([
+      'name'          => __( 'Pätička', 'javorka' ),
+      'id'            => 'footerfull',
+      'description'   => __( 'Oblasť pätičky na hlanej stránke', 'javorka' ),
+      'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes">',
+      'after_widget'  => '</div><!-- .footer-widget -->',
+      'before_title'  => '<h3 class="widget-title">',
+      'after_title'   => '</h3>'
+    ]);
 
 	}
 } // End of function_exists( 'javorka_widgets_init' ).

@@ -23,7 +23,9 @@
         <div id="wrapper-topbar" class="py-2 bg-primary">
           <div class="container">
             <div class="row">
-              <div id="topbar-content" class="col-md-12 text-left text-center text-md-left small"> <?php echo do_shortcode(get_theme_mod('topbar_content')) ?>	</div>
+              <div id="topbar-content" class="col-md-12 text-left text-center text-md-left small"> 
+                <?php echo do_shortcode(get_theme_mod('topbar_content')) ?>	
+              </div>
             </div>
           </div>
         </div>
@@ -33,29 +35,13 @@
         <!-- ******************* The Navbar Area ******************* -->
         <div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 
-          <a class="skip-link visually-hidden-focusable" href="#theme-main"><?php esc_html_e( 'Skip to content', 'picostrap' ); ?></a>
+          <a class="skip-link visually-hidden-focusable" href="#theme-main"><?php esc_html_e( 'Skip to content', 'javorka' ); ?></a>
 
           <nav class="navbar navbar-expand-lg bg-primary" aria-label="Main Navigation" >
             <div class="container">
-              <div id="logo-tagline-wrap">
-                  <!-- Your site title as branding in the menu -->
-                  <?php if ( ! has_custom_logo() ) { ?>
-
-                    <?php if ( is_front_page() && is_home() ) : ?>
-
-                      <div class="navbar-brand mb-0 h3"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></div>
-
-                    <?php else : ?>
-
-                      <a class="navbar-brand h3" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
-
-                    <?php endif; ?>
-
-
-                  <?php } else {
-                    the_custom_logo();
-                  } ?><!-- end custom logo -->
-                  </div> <!-- /logo-tagline-wrap -->
+              <a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
+                <img width="60px" src="<?php echo get_template_directory_uri() . '/assets/images/javorka-logo.png' ?>" alt="<?php _e( 'Javorka logo', 'javorka' ) ?>" />
+              </a>
 
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -63,15 +49,15 @@
 
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <?php  wp_nav_menu([
-                    'theme_location'    => 'primary',
-                    'depth'             => 2,
-                    'container'         => '',
-                    'container_class'   => '',
-                    'container_id'      => '',
-                    'menu_class'        => 'navbar-nav me-auto mb-2 mb-lg-0',
-                    'menu_id'         => 'main-menu',
-                    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-                    'walker'            => new WP_Bootstrap_Navwalker(),
+                  'theme_location'    => 'primary',
+                  'depth'             => 2,
+                  'container'         => '',
+                  'container_class'   => '',
+                  'container_id'      => '',
+                  'menu_class'        => 'navbar-nav me-auto mb-2 mb-lg-0',
+                  'menu_id'           => 'main-menu',
+                  'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                  'walker'            => new WP_Bootstrap_Navwalker()
                 ]); 
                 
                 ?>
@@ -84,7 +70,6 @@
 
         </div><!-- #wrapper-navbar end -->
 
-      
     <?php 
     } // END ELSE CASE 
     ?>

@@ -1,13 +1,24 @@
 <?php defined( 'ABSPATH' ) || exit; ?>
 <?php get_header(); ?>
 
-<!-- START: Title Photo -->
-<div class="container">
+<!-- START: Cover Photo -->
+<div class="container-fluid">
   <div class="row">
-    <div class="col-md-8 offset-md-2"></div>
+    <div id="cover-photo">
+
+    <div class="cover-caption d-none d-md-block home-content">
+      <div class="cover-title">
+        <h2>Gymnázium Javorová 16</h2>
+      </div>
+      <div class="cover-text">
+        Päťročné bilingválne a osemročné štúdium
+      </div>
+    </div>
+
+    </div>
   </div>
 </div>
-<!-- END: Title Photo -->
+<!-- END: Cover Photo -->
 
 <!-- START: Events -->
 <div class="container">
