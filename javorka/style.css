@@ -47,33 +47,33 @@ main#theme-main {
 	padding: 20px;
 }
 
-#theme-main .container h1 {
+body h1 {
 	font-size: 33px;
 	line-height: 57px;
 	margin-bottom: 32px;
 }
 
-#theme-main .container .title {
+body .title {
 	font-size: 42px;
 	line-height: 70px;
 	margin-bottom: 32px;
 }
 
-#theme-main .container h2 {
+body h2 {
 	font-size: 26px;
 	line-height: 47px;
 	/* margin-top: 52px; */
 	margin-bottom: 20px;
 }
 
-#theme-main .container h3 {
+body h3 {
 	font-size: 20px;
 	line-height: 38px;
 	/* margin-top: 32px; */
 	margin-bottom: 13px;
 }
 
-#theme-main .container h4 {
+body h4 {
 	font-size: 16px;
 	line-height: 32px;
   font-weight: bold;

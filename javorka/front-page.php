@@ -48,8 +48,11 @@
               <a href="<?php the_permalink() ?>" target="_self" title="<?php _e( 'Čítaj ďalej článok ', 'javorka' ) . the_title(); ?>">
                 <?php 
                   if (has_post_thumbnail()): 
-                    the_post_thumbnail();
-                  else: 
+                    $image_arr = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full');
+                    ?>
+                      <img src="<?php echo $image_arr[0] ?>" class="card-img-top" alt="<?php the_title(); ?>">
+                    <?php
+                  else:
                 ?>
                   <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/thumbnail-default.jpg' ?>" class="card-img-top" alt="<?php the_title(); ?>">
                 <?php endif; ?>   
