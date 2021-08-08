@@ -58,12 +58,9 @@
                   'menu_id'           => 'main-menu',
                   'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                   'walker'            => new WP_Bootstrap_Navwalker()
-                ]); 
+                ]);
                 
                 ?>
-                <form hidden>
-                  <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                </form>
               </div>
             </div>
           </nav> <!-- .site-navigation -->

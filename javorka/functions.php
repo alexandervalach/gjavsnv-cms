@@ -6,7 +6,7 @@ defined( 'ABSPATH' ) || exit;
 
 $includes = [
 	'/theme-settings.php',                  // Initialize theme default settings.
-	//'/setup.php',                           // Theme setup and custom theme supports.
+	'/setup.php',                           // Theme setup and custom theme supports.
 	'/widgets.php',                         // Register widget area.
 	'/clean-head.php',							// Eliminates useless meta tags, emojis, etc            
 	'/enqueues.php', 							// Enqueue scripts and styles.     

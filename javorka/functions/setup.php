@@ -2,7 +2,7 @@
 /**
  * Theme basic setup
  *
- * @package picostrap5
+ * @package javorka5
  */
 
 // Exit if accessed directly.
@@ -13,9 +13,9 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-add_action( 'after_setup_theme', 'picostrap_setup' );
+add_action( 'after_setup_theme', 'javorka_setup' );
 
-if ( ! function_exists( 'picostrap_setup' ) ) {
+if ( ! function_exists( 'javorka_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -23,14 +23,14 @@ if ( ! function_exists( 'picostrap_setup' ) ) {
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function picostrap_setup() {
+	function javorka_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on picostrap, use a find and replace
-		 * to change 'picostrap' to the name of your theme in all the template files
+		 * If you're building a theme based on javorka, use a find and replace
+		 * to change 'javorka' to the name of your theme in all the template files
 		 */
-		load_theme_textdomain( 'picostrap', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'javorka', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -45,10 +45,13 @@ if ( ! function_exists( 'picostrap_setup' ) ) {
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
-			array(
-				'primary' => __( 'Primary Menu', 'picostrap' ),
-				'secondary' => __( 'Secondary Menu', 'picostrap' ),
-			)
+			[
+				'primary' => __( 'Hlavná navigácia', 'javorka' ),
+				'secondary' => __( 'Sekundárna navigácia', 'javorka' ),
+        'footer-1' => __( 'Navigácia v pätičke #1', 'javorka' ),
+        'footer-2' => __( 'Navigácia v pätičke #2', 'javorka' ),
+        'footer-3' => __( 'Navigácia v pätičke #3', 'javorka' ),
+      ]
 		);
 
 		/*
@@ -57,7 +60,7 @@ if ( ! function_exists( 'picostrap_setup' ) ) {
 		 */
 		add_theme_support(
 			'html5',
-			array(
+			[
 				'search-form',
 				'comment-form',
 				'comment-list',
@@ -65,7 +68,7 @@ if ( ! function_exists( 'picostrap_setup' ) ) {
 				'caption',
 				'script',
 				'style',
-			)
+      ]
 		);
 
 		/*
@@ -98,7 +101,7 @@ if ( ! function_exists( 'picostrap_setup' ) ) {
 		add_theme_support(
 			'custom-background',
 			apply_filters(
-				'picostrap_custom_background_args',
+				'javorka_custom_background_args',
 				array(
 					'default-color' => 'ffffff',
 					'default-image' => '',
@@ -114,7 +117,7 @@ if ( ! function_exists( 'picostrap_setup' ) ) {
 		add_theme_support( 'responsive-embeds' );
 
 		// Check and setup theme default settings.
-		picostrap_setup_theme_default_settings();
+		javorka_setup_theme_default_settings();
 
 	}
 }
@@ -124,10 +127,8 @@ add_filter("excerpt_length",function($in){
 });
 
 
-
-add_filter( 'excerpt_more', 'picostrap_custom_excerpt_more' );
-
-if ( ! function_exists( 'picostrap_custom_excerpt_more' ) ) {
+add_filter( 'excerpt_more', 'javorka_custom_excerpt_more' );
+if ( !function_exists( 'javorka_custom_excerpt_more' ) ) {
 	/**
 	 * Removes the ... from the excerpt read more link
 	 *
@@ -135,17 +136,16 @@ if ( ! function_exists( 'picostrap_custom_excerpt_more' ) ) {
 	 *
 	 * @return string
 	 */
-	function picostrap_custom_excerpt_more( $more ) {
-		if ( ! is_admin() ) {
+	function javorka_custom_excerpt_more( $more ) {
+		if ( !is_admin() ) {
 			$more = '';
 		}
 		return $more;
 	}
 }
 
-add_filter( 'wp_trim_excerpt', 'picostrap_all_excerpts_get_more_link' );
-
-if ( ! function_exists( 'picostrap_all_excerpts_get_more_link' ) ) {
+add_filter( 'wp_trim_excerpt', 'javorka_all_excerpts_get_more_link' );
+if ( ! function_exists( 'javorka_all_excerpts_get_more_link' ) ) {
 	/**
 	 * Adds a custom read more link to all excerpts, manually or automatically generated
 	 *
@@ -153,37 +153,34 @@ if ( ! function_exists( 'picostrap_all_excerpts_get_more_link' ) ) {
 	 *
 	 * @return string
 	 */
-	function picostrap_all_excerpts_get_more_link( $post_excerpt ) {
+	function javorka_all_excerpts_get_more_link( $post_excerpt ) {
 		if ( ! is_admin() ) {
-			$post_excerpt = $post_excerpt . '...<p class="text-right"><a class="btn btn-outline-secondary picostrap-read-more-link " href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __(
+			$post_excerpt = $post_excerpt . '...<p class="text-right"><a class="btn btn-outline-secondary javorka-read-more-link " href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __(
 				'Read More...',
-				'picostrap'
+				'javorka'
 			) . '</a></p>';
 		}
 		return $post_excerpt;
 	}
 }
 
-
-
-
 // FIX WORDPRESS CATEGORY / ARCHIVE TITLES /////////
 add_filter( 'get_the_archive_title', function ($title) {
-    if ( is_category() ) {
-            $title = single_cat_title( '', false );
-        } elseif ( is_tag() ) {
-            $title = single_tag_title( '', false );
-        } elseif ( is_author() ) {
-            $title = '<span class="vcard">' . get_the_author() . '</span>' ;
-    }
-    return $title;
+  if ( is_category() ) {
+    $title = single_cat_title( '', false );
+  } elseif ( is_tag() ) {
+    $title = single_tag_title( '', false );
+  } elseif ( is_author() ) {
+    $title = '<span class="vcard">' . get_the_author() . '</span>' ;
+  }
+  return $title;
 });
 
-
-
 //RESPONSIVE VIDEO EMBEDS
-function bootstrap_wrap_oembed( $html ){
-	$html = preg_replace( '/(width|height)="\d*"\s/', "", $html ); // Strip width and height #1
-	return'<div class="embed-responsive embed-responsive-16by9">'.$html.'</div>'; // Wrap in div element and return #3 and #4
+if ( !function_exists( 'bootstrap_wrap_oembed' ) ) {
+  function bootstrap_wrap_oembed( $html ){
+    $html = preg_replace( '/(width|height)="\d*"\s/', "", $html ); // Strip width and height #1
+    return'<div class="embed-responsive embed-responsive-16by9">'.$html.'</div>'; // Wrap in div element and return #3 and #4
   }
-  add_filter( 'embed_oembed_html','bootstrap_wrap_oembed',10,1);
+}
+add_filter( 'embed_oembed_html','bootstrap_wrap_oembed',10,1);
