@@ -8,6 +8,8 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+require_once get_template_directory() . '/widgets/contact-widget.php';
+
 /**
  * Add filter to the parameters passed to a widget's display callback.
  * The filter is evaluated on both the front and the back end!
@@ -81,9 +83,9 @@ if ( !function_exists( 'javorka_widgets_init' ) ) {
 	 */
 	function javorka_widgets_init() {
 		register_sidebar([
-      'name'          => __( 'Main Sidebar', 'javorka' ),
+      'name'          => __( 'Bočný panel', 'javorka' ),
       'id'            => 'main-sidebar',
-      'description'   => __( 'Main sidebar widget area', 'javorka' ),
+      'description'   => __( 'Bočný panel nachádzajúci sa napravo od hlavného obsahu', 'javorka' ),
       'before_widget' => '<aside id="%1$s" class="widget %2$s">',
       'after_widget'  => '</aside>',
       'before_title'  => '<h3 class="widget-title">',
@@ -93,8 +95,18 @@ if ( !function_exists( 'javorka_widgets_init' ) ) {
 		
 		register_sidebar([
       'name'          => __( 'Pätička', 'javorka' ),
-      'id'            => 'footerfull',
-      'description'   => __( 'Oblasť pätičky na hlanej stránke', 'javorka' ),
+      'id'            => 'page-footer',
+      'description'   => __( 'Oblasť pätičky na hlavnej stránke', 'javorka' ),
+      'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes">',
+      'after_widget'  => '</div><!-- .footer-widget -->',
+      'before_title'  => '<h3 class="widget-title">',
+      'after_title'   => '</h3>'
+    ]);
+
+    register_sidebar([
+      'name'          => __( 'Odbory', 'javorka' ),
+      'id'            => 'study-programs',
+      'description'   => __( 'Informácie pre uchádzačov', 'javorka' ),
       'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes">',
       'after_widget'  => '</div><!-- .footer-widget -->',
       'before_title'  => '<h3 class="widget-title">',
@@ -103,3 +115,11 @@ if ( !function_exists( 'javorka_widgets_init' ) ) {
 
 	}
 } // End of function_exists( 'javorka_widgets_init' ).
+
+if ( !function_exists( 'javorka_load_widgets' ) ) {
+  function javorka_load_widgets() {
+    register_widget( 'javorka_contact_widget' );
+  }
+}
+
+add_action( 'widgets_init', 'javorka_load_widgets' );

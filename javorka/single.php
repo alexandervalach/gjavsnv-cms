@@ -13,16 +13,19 @@ if ( have_posts() ) :
     
     <header class="row text-center">
       <div class="col-md-12">
-        <?php if ( has_category() ): ?>
+        <!--
+        <?php // if ( has_category() ): ?>
           <div class="entry-categories">
-            <span class="screen-reader-text"><?php _e( 'Kategórie', 'javorka' ); ?></span>
+            <span class="screen-reader-text"><?php // _e( 'Kategórie', 'javorka' ); ?></span>
             <div class="entry-categories-inner">
-              <?php the_category( ' ' ); ?>
-            </div><!-- .entry-categories-inner -->
-          </div><!-- .entry-categories -->
-        <?php endif; ?>
+              <?php // the_category( ' ' ); ?>
+            </div>
+          </div>
+        <?php // endif; ?>
+        -->
+
         <h1><?php the_title(); ?></h1>
-        </div><!-- /col -->
+      </div><!-- /col -->
     </header>
 
     <div class="row">

@@ -146,7 +146,7 @@ body a {
 
 /* COVER PHOTO */
 #cover-photo {
-  height: 400px; 
+  height: 400px;  
   background: url('./assets/images/cover.jpg') left top no-repeat;
   background-size: cover;
   position: relative;
@@ -197,19 +197,27 @@ body a {
 }
 
 /* NAVBAR */
+nav.navbar {
+  background: #fff;
+}
+
+nav.navbar a {
+  color: #017014 !important;
+}
+
 .navbar-brand a { 
   text-decoration: none;
 }
 
 ul.dropdown-menu {
-  background: #9bc971;
+  background: #fff;
 }
 
 ul.dropdown-menu a {
-  color: #000;
+  color: #017014;
 }
 
 ul.dropdown-menu a:hover {
-  background: #017014;
+  background: #9bc971;
   color: #fff;
 }

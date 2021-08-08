@@ -20,7 +20,7 @@
       
       if (get_theme_mod("enable_topbar") ) : ?>
         <!-- ******************* The Topbar Area ******************* -->
-        <div id="wrapper-topbar" class="py-2 bg-primary">
+        <div id="wrapper-topbar">
           <div class="container">
             <div class="row">
               <div id="topbar-content" class="col-md-12 text-left text-center text-md-left small"> 
@@ -37,10 +37,10 @@
 
           <a class="skip-link visually-hidden-focusable" href="#theme-main"><?php esc_html_e( 'Skip to content', 'javorka' ); ?></a>
 
-          <nav class="navbar navbar-expand-lg bg-primary" aria-label="Main Navigation" >
+          <nav class="navbar fixed-top navbar-expand-lg" aria-label="Main Navigation" >
             <div class="container">
               <a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-                <img width="60px" src="<?php echo get_template_directory_uri() . '/assets/images/javorka-logo.png' ?>" alt="<?php _e( 'Javorka logo', 'javorka' ) ?>" />
+                <img width="150px" src="<?php echo get_template_directory_uri() . '/assets/images/javorka.svg' ?>" alt="<?php _e( 'Javorka logo', 'javorka' ) ?>" />
               </a>
 
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,7 +48,7 @@
               </button>
 
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <?php  wp_nav_menu([
+                <?php wp_nav_menu([
                   'theme_location'    => 'primary',
                   'depth'             => 2,
                   'container'         => '',
