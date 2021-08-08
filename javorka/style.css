@@ -141,13 +141,12 @@ main#theme-main {
 	margin: 0 1px;
 }
 
-/*
 #theme-main .container .alert, 
 #theme-main .container .note, 
-#theme-main .container .box {
+#theme-main .container .box,
+footer#site-footer {
 	padding: 20px;
 }
-*/
 
 #theme-main .container .footnotes {
 	font-size: 13px;
@@ -261,3 +260,4 @@ ul.dropdown-menu a:hover {
   color: #fff;
 }
 
+/* */

@@ -9,7 +9,6 @@
 defined( 'ABSPATH' ) || exit;
 
 require_once get_template_directory() . '/widgets/contact-widget.php';
-require_once get_template_directory() . '/widgets/footer-menu-widget.php';
 require_once get_template_directory() . '/widgets/card-widget.php';
 
 /**
@@ -130,7 +129,6 @@ if ( !function_exists( 'javorka_load_widgets' ) ) {
   function javorka_load_widgets() {
     register_widget( 'javorka_contact_widget' );
 	register_widget( 'javorka_card_widget' );
-	register_widget( 'javorka_footer_menu_widget' );
   }
 }
 

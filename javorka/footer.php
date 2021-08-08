@@ -1,11 +1,11 @@
 </main>
 		
-  <div class="wrapper" id="wrapper-footer-colophon">
-    <div class="container-fluid">
+  <div class="wrapper bg-primary" id="wrapper-site-footer">
+    <div class="container">
       <div class="row">
-        <footer class="site-footer bg-primary text-center" id="colophon">
+        <footer class="site-footer" id="site-footer">
           
-          <div class="row align-items-center">
+          <div class="row">
 
             <?php
               $locations = get_nav_menu_locations();
@@ -15,7 +15,7 @@
             ?>
 
             <div class="col">
-              <h3 class="text-center"><?php echo $menu_name; ?></h3>
+              <h3><?php echo $menu_name; ?></h3>
               <?php wp_nav_menu([
                   'theme_location'    => 'footer-1',
                   'depth'             => 1,
@@ -37,7 +37,7 @@
             ?>
 
             <div class="col">
-              <h3 class="text-center"><?php echo $menu_name; ?></h3>
+              <h3><?php echo $menu_name; ?></h3>
               <?php wp_nav_menu([
                   'theme_location'    => 'footer-2',
                   'depth'             => 1,
@@ -59,7 +59,7 @@
             ?>
 
             <div class="col">
-              <h3 class="text-center"><?php echo $menu_name; ?></h3>
+              <h3><?php echo $menu_name; ?></h3>
               <?php wp_nav_menu([
                   'theme_location'    => 'footer-3',
                   'depth'             => 1,
@@ -80,7 +80,7 @@
             <?php endif; ?>
           </div>
 
-          <div class="site-info">
+          <div class="site-info text-center">
             Copyright &copy; Gymnázium Javorová, 2020 - <?php echo date('Y'); ?>
           </div><!-- .site-info -->
         </footer><!-- #colophon -->

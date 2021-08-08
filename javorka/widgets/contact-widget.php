@@ -18,7 +18,7 @@ class javorka_contact_widget extends WP_Widget {
     ?>
     
     <div class="col">
-      <h3 class="text-center"><?php _e( 'Kontakt', 'javorka' ); ?></h3>
+      <h3><?php _e( 'Kontakt', 'javorka' ); ?></h3>
       <address>
         <strong><?php echo $title; ?></strong>
         <span><?php echo $street; ?></span>
@@ -32,7 +32,7 @@ class javorka_contact_widget extends WP_Widget {
       </div>
       <div class="additional-contact-info">
         <span>
-          <?php _e( 'IČO_', 'javorka' ); echo $vat_number; ?>
+          <?php _e( 'IČO: ', 'javorka' ); echo $vat_number; ?>
         </span>
         <span>
           <a href="<?php echo $map_link ?>" target="_blank" title="<?php _e( 'Poloha školy' , 'javorka' ); ?>">

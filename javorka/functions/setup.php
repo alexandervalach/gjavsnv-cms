@@ -122,11 +122,6 @@ if ( ! function_exists( 'javorka_setup' ) ) {
 	}
 }
 
-add_filter("excerpt_length",function($in){
-	return 22;
-});
-
-
 add_filter( 'excerpt_more', 'javorka_custom_excerpt_more' );
 if ( !function_exists( 'javorka_custom_excerpt_more' ) ) {
 	/**
@@ -144,26 +139,6 @@ if ( !function_exists( 'javorka_custom_excerpt_more' ) ) {
 	}
 }
 
-add_filter( 'wp_trim_excerpt', 'javorka_all_excerpts_get_more_link' );
-if ( ! function_exists( 'javorka_all_excerpts_get_more_link' ) ) {
-	/**
-	 * Adds a custom read more link to all excerpts, manually or automatically generated
-	 *
-	 * @param string $post_excerpt Posts's excerpt.
-	 *
-	 * @return string
-	 */
-	function javorka_all_excerpts_get_more_link( $post_excerpt ) {
-		if ( ! is_admin() ) {
-			$post_excerpt = $post_excerpt . '...<p class="text-right"><a class="btn btn-outline-secondary javorka-read-more-link " href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __(
-				'Read More...',
-				'javorka'
-			) . '</a></p>';
-		}
-		return $post_excerpt;
-	}
-}
-
 // FIX WORDPRESS CATEGORY / ARCHIVE TITLES /////////
 add_filter( 'get_the_archive_title', function ($title) {
   if ( is_category() ) {
@@ -176,7 +151,7 @@ add_filter( 'get_the_archive_title', function ($title) {
   return $title;
 });
 
-//RESPONSIVE VIDEO EMBEDS
+// RESPONSIVE VIDEO EMBEDS
 if ( !function_exists( 'bootstrap_wrap_oembed' ) ) {
   function bootstrap_wrap_oembed( $html ){
     $html = preg_replace( '/(width|height)="\d*"\s/', "", $html ); // Strip width and height #1
