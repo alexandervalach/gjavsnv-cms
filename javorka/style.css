@@ -195,8 +195,14 @@ footer#site-footer {
 
 /* FRONT PAGE SPECIFIC STYLES */
 #social-networks {
-	background: url('./assets/images/cover.jpg') left top no-repeat;
-	background-size: cover;
+	/* background: url('./assets/images/cover.jpg') left top no-repeat;
+	background-size: cover;*/
+  background-color: #167831;
+  color: #fff;
+}
+
+#social-networks img {
+  margin: 15px 10px;
 }
 
 #study-programs {
@@ -256,7 +262,8 @@ nav.navbar {
   -moz-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.75);
 }
 
-nav.navbar a {
+nav.navbar a,
+footer#site-footer a {
   color: #167831 !important;
 }
 
@@ -277,4 +284,4 @@ ul.dropdown-menu a:hover {
   color: #fff;
 }
 
-/* */
+/* FOOTER */

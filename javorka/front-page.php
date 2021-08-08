@@ -101,24 +101,4 @@
 <?php endif; ?>
 <!-- END: Special powers -->
 
-<!-- START: Social networks -->
-<div class="container-fluid" id="social-networks">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 bg-light-transparent text-center" style="padding: 20px">
-        <h2><?php _e( 'Nájdete nás aj na sociálnych sieťach', 'javorka' ); ?></h2>
-        
-        <a href="https://www.facebook.com/javorka16" target="_blank" title="<?php _e( 'Prejsť na Facebook stránku Javorky', 'javorka' ) ?>">
-          <img width="50px" src="<?php echo get_template_directory_uri() . '/assets/images/facebook-logo.svg' ?>" class="mx-auto d-inline-block" alt="<?php _e( 'Facebook logo', 'javorka' ) ?>">
-        </a>
-
-        <a href="https://www.instagram.com/javorka.official/" target="_blank" title="<?php _e( 'Prejsť na Instagram stránku Javorky', 'javorka' ) ?>">
-          <img width="50px" src="<?php echo get_template_directory_uri() . '/assets/images/instagram-logo.svg' ?>" class="mx-auto d-inline-block" alt="<?php _e( 'Instagram logo', 'javorka' ) ?>">
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- END: Social networks -->
-
 <?php get_footer();

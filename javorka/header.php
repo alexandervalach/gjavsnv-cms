@@ -7,6 +7,8 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="shortcut icon" type="image/svg+xml" href="<?php echo get_template_directory_uri() . '/assets/images/javorka.svg' ?>">
+
     <!-- wp_head begin -->
     <?php wp_head(); ?>
     <!-- wp_head end -->
