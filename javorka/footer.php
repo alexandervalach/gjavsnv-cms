@@ -6,6 +6,16 @@
         <footer class="site-footer bg-primary text-center" id="colophon">
           
           <div class="row align-items-center">
+
+            <div class="col">
+            </div>
+
+            <div class="col">
+            </div>
+
+            <div class="col">
+            </div>
+
             <?php if ( is_active_sidebar( 'page-footer' ) ): ?>
               <?php dynamic_sidebar( 'page-footer' ); ?>
             <?php endif; ?>

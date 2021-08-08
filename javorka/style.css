@@ -222,6 +222,10 @@ main#theme-main {
   color: #9bc971 !important;
 }
 
+div .javorka-card {
+  border: none; 
+}
+
 /* NAVBAR */
 nav.navbar {
   background: #fff;
@@ -250,3 +254,4 @@ ul.dropdown-menu a:hover {
   background: #9bc971;
   color: #fff;
 }
+

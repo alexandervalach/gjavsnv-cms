@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) || exit;
 
 require_once get_template_directory() . '/widgets/contact-widget.php';
 require_once get_template_directory() . '/widgets/footer-menu-widget.php';
-require_once get_template_directory() . '/widgets/study-programs.php';
+require_once get_template_directory() . '/widgets/card-widget.php';
 
 /**
  * Add filter to the parameters passed to a widget's display callback.
@@ -94,17 +94,6 @@ if ( !function_exists( 'javorka_widgets_init' ) ) {
       'after_title'   => '</h3>'
     ]);
 
-		
-		register_sidebar([
-      'name'          => __( 'Pätička', 'javorka' ),
-      'id'            => 'page-footer',
-      'description'   => __( 'Oblasť pätičky na hlavnej stránke', 'javorka' ),
-      'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes">',
-      'after_widget'  => '</div><!-- .footer-widget -->',
-      'before_title'  => '<h3 class="widget-title">',
-      'after_title'   => '</h3>'
-    ]);
-
     register_sidebar([
       'name'          => __( 'Formy štúdia', 'javorka' ),
       'id'            => 'study-programs',
@@ -115,13 +104,32 @@ if ( !function_exists( 'javorka_widgets_init' ) ) {
       'after_title'   => '</h3>'
     ]);
 
+    register_sidebar([
+      'name'          => __( 'V čom sme iní – prečo študovať u nás?', 'javorka' ),
+      'id'            => 'special-powers',
+      'description'   => __( 'V čom sme iní – prečo študovať u nás?', 'javorka' ),
+      'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes">',
+      'after_widget'  => '</div><!-- .footer-widget -->',
+      'before_title'  => '<h3 class="widget-title">',
+      'after_title'   => '</h3>'
+    ]);
+
+    register_sidebar([
+      'name'          => __( 'Pätička', 'javorka' ),
+      'id'            => 'page-footer',
+      'description'   => __( 'Oblasť pätičky na hlavnej stránke', 'javorka' ),
+      'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes">',
+      'after_widget'  => '</div><!-- .footer-widget -->',
+      'before_title'  => '<h3 class="widget-title">',
+      'after_title'   => '</h3>'
+    ]);
 	}
 } // End of function_exists( 'javorka_widgets_init' ).
 
 if ( !function_exists( 'javorka_load_widgets' ) ) {
   function javorka_load_widgets() {
     register_widget( 'javorka_contact_widget' );
-	register_widget( 'javorka_study_programs_widget' );
+	register_widget( 'javorka_card_widget' );
 	register_widget( 'javorka_footer_menu_widget' );
   }
 }

@@ -38,8 +38,15 @@
   <div class="row">
     <h2 class="text-center"><?php _e( 'Aktuality' , 'javorka' ); ?></h2>
     <?php 
+      $args = [
+        'posts_per_page' => 3
+      ];
+
+      $query = new WP_Query( $args );
+
       if ( have_posts() ):
-          while ( have_posts() ): the_post();
+          while ( $query->have_posts() ): 
+            $query->the_post();
           ?>
 
           <div class="col d-flex">
@@ -75,7 +82,6 @@
 <!-- END: News -->
 
 <!-- START: Study programmes -->
-
 <?php if ( is_active_sidebar( 'study-programs' ) ): ?>
 <div class="container">
   <div class="row">
@@ -84,17 +90,17 @@
   </div>
 </div>
 <?php endif; ?>
-
 <!-- END: Study programmes -->
 
 <!-- START: Special powers -->
+<?php if ( is_active_sidebar( 'special-powers' ) ): ?>
 <div class="container">
   <div class="row">
-    <div class="col-sm-12 text-center">
-      <h2><?php _e( 'V čom sme iní – prečo študovať u nás?', 'javorka' ); ?></h2>
-    </div>
+    <h2 class="text-center"><?php _e( 'V čom sme iní – prečo študovať u nás?', 'javorka' ); ?></h2>
+    <?php dynamic_sidebar( 'special-powers' ); ?>
   </div>
 </div>
+<?php endif; ?>
 <!-- END: Special powers -->
 
 <!-- START: Social networks -->
