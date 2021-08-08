@@ -38,11 +38,11 @@
   <div class="row">
     <h2 class="text-center"><?php _e( 'Aktuality' , 'javorka' ); ?></h2>
     <?php 
-      if ( have_posts() ): 
+      if ( have_posts() ):
           while ( have_posts() ): the_post();
           ?>
 
-          <div class="col-sm-6 col-md-4 d-flex">
+          <div class="col d-flex">
             <div class="card">
               <a href="<?php the_permalink() ?>" target="_self" title="<?php _e( 'Čítaj ďalej článok ', 'javorka' ) . the_title(); ?>">
                 <?php 
@@ -75,47 +75,16 @@
 <!-- END: News -->
 
 <!-- START: Study programmes -->
+
+<?php if ( is_active_sidebar( 'study-programs' ) ): ?>
 <div class="container">
   <div class="row">
-  
     <h2 class="text-center"><?php _e( 'Pre uchádzačov' , 'javorka' ); ?></h2>
-
-    <?php if ( is_active_sidebar( 'study-programs' ) ): ?>
-      <?php dynamic_sidebar( 'study-programs' ); ?>
-    <?php endif; ?>
-
-    <div class="col-sm-6 col-md-4">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title"><?php _e( 'Bilingválne štúdium', 'javorka' ); ?></h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="card-link"><?php _e( 'Viac o bilingválnom štúdiu', 'javorka' ); ?></a>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-sm-6 col-md-4">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title"><?php _e( '8-ročné štúdium', 'javorka' ); ?></h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="card-link"><?php _e( 'Viac o 8-ročnom štúdiu', 'javorka' ); ?></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-6 col-md-4">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title"><?php _e( 'Prestupy', 'javorka' ); ?></h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="card-link"><?php _e( 'Viac o prestupoch', 'javorka' ); ?></a>
-        </div>
-      </div>
-    </div>
-
+    <?php dynamic_sidebar( 'study-programs' ); ?>
   </div>
 </div>
+<?php endif; ?>
+
 <!-- END: Study programmes -->
 
 <!-- START: Special powers -->

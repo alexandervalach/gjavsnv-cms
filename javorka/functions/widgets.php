@@ -9,6 +9,8 @@
 defined( 'ABSPATH' ) || exit;
 
 require_once get_template_directory() . '/widgets/contact-widget.php';
+require_once get_template_directory() . '/widgets/footer-menu-widget.php';
+require_once get_template_directory() . '/widgets/study-programs.php';
 
 /**
  * Add filter to the parameters passed to a widget's display callback.
@@ -104,9 +106,9 @@ if ( !function_exists( 'javorka_widgets_init' ) ) {
     ]);
 
     register_sidebar([
-      'name'          => __( 'Odbory', 'javorka' ),
+      'name'          => __( 'Formy štúdia', 'javorka' ),
       'id'            => 'study-programs',
-      'description'   => __( 'Informácie pre uchádzačov', 'javorka' ),
+      'description'   => __( 'Formy štúdia na úvodnej stránke', 'javorka' ),
       'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes">',
       'after_widget'  => '</div><!-- .footer-widget -->',
       'before_title'  => '<h3 class="widget-title">',
@@ -119,6 +121,8 @@ if ( !function_exists( 'javorka_widgets_init' ) ) {
 if ( !function_exists( 'javorka_load_widgets' ) ) {
   function javorka_load_widgets() {
     register_widget( 'javorka_contact_widget' );
+	register_widget( 'javorka_study_programs_widget' );
+	register_widget( 'javorka_footer_menu_widget' );
   }
 }
 

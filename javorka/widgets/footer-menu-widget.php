@@ -1,7 +1,7 @@
 <?php
 
 // Creating the widget 
-class javorka_contact_widget extends WP_Widget {
+class javorka_footer_menu_widget extends WP_Widget {
 
   function __construct() {
       parent::__construct(
