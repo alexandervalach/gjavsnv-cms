@@ -46,18 +46,16 @@ if ( ! function_exists( 'javorka_get_theme_default_settings' ) ) {
 	}
 }
 
-
 // as per https://livecanvas.com/faq/which-themes-with-livecanvas/
 function lc_theme_is_livecanvas_friendly(){}
-
 
 // expose to the livecanvas plugin the active Bootstrap version
 function lc_theme_bootstrap_version(){ return 5; }
 
 // Limits a number of characters shown in excerpt
-function custom_excerpt_length( $length ) { return 20; }
+function custom_excerpt_length( $length ) { return 15; }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 // Changes default excerpt ending to a custom one
-function new_excerpt_more($more) { return '&hellip;'; }
-add_filter('excerpt_more', 'new_excerpt_more');
+function javorka_excerpt_more($more) { return '&hellip;'; }
+add_filter( 'excerpt_more', 'javorka_excerpt_more');

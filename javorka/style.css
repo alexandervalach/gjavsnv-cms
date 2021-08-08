@@ -50,27 +50,27 @@ main#theme-main {
 #theme-main .container h1 {
 	font-size: 33px;
 	line-height: 57px;
-	margin-bottom: 16px;
+	margin-bottom: 32px;
 }
 
 #theme-main .container .title {
 	font-size: 42px;
 	line-height: 70px;
-	margin-bottom: 16px;
+	margin-bottom: 32px;
 }
 
 #theme-main .container h2 {
 	font-size: 26px;
 	line-height: 47px;
 	/* margin-top: 52px; */
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 #theme-main .container h3 {
 	font-size: 20px;
 	line-height: 38px;
 	/* margin-top: 32px; */
-	margin-bottom: 6px;
+	margin-bottom: 13px;
 }
 
 #theme-main .container h4 {
@@ -193,6 +193,17 @@ footer#site-footer {
   padding: 0;
 }
 
+/* FRONT PAGE SPECIFIC STYLES */
+#social-networks {
+	background: url('./assets/images/cover.jpg') left top no-repeat;
+	background-size: cover;
+}
+
+#study-programs {
+	background: url('./assets/images/cover.jpg') left top no-repeat;
+	background-size: cover;
+}
+
 /* CUSTOM CLASSES */
 .bg-primary {
   background: #167831 !important;
@@ -213,6 +224,10 @@ footer#site-footer {
   background: #9bc971;
 }
 
+.bg-light-transparent {
+  background-color: rgba(255,255,255,0.8);
+}
+
 .text-primary {
   color: #167831 !important;
 }
@@ -222,7 +237,9 @@ footer#site-footer {
 }
 
 div .javorka-card {
-  border: none; 
+  border: none;
+  background-color: rgba(255,255,255,0.9);
+  padding: 10px;
 }
 
 address span,

@@ -122,23 +122,6 @@ if ( ! function_exists( 'javorka_setup' ) ) {
 	}
 }
 
-add_filter( 'excerpt_more', 'javorka_custom_excerpt_more' );
-if ( !function_exists( 'javorka_custom_excerpt_more' ) ) {
-	/**
-	 * Removes the ... from the excerpt read more link
-	 *
-	 * @param string $more The excerpt.
-	 *
-	 * @return string
-	 */
-	function javorka_custom_excerpt_more( $more ) {
-		if ( !is_admin() ) {
-			$more = '';
-		}
-		return $more;
-	}
-}
-
 // FIX WORDPRESS CATEGORY / ARCHIVE TITLES /////////
 add_filter( 'get_the_archive_title', function ($title) {
   if ( is_category() ) {
