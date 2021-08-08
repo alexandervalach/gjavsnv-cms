@@ -26,7 +26,17 @@ body {
 
 body a {
 	text-decoration: none !important;
-  color: #017014;
+  color: #167831;
+}
+
+body a {
+	text-decoration: none !important;
+  color: #167831;
+}
+
+main#theme-main {
+  margin-top: 75px;
+  min-height: 75vh;
 }
 
 #theme-main .container {
@@ -74,9 +84,11 @@ body a {
 	margin-bottom: 32px;
 }
 
+/*
 #theme-main .container ul, #theme-main .container ol {
 	margin-left: 32px;
 }
+*/
 
 #theme-main .container li {
 	margin-bottom: 12px;
@@ -146,7 +158,7 @@ body a {
 
 /* COVER PHOTO */
 #cover-photo {
-  height: 400px;  
+  height: 500px;  
   background: url('./assets/images/cover.jpg') left top no-repeat;
   background-size: cover;
   position: relative;
@@ -170,7 +182,7 @@ body a {
 
 /* CUSTOM CLASSES */
 .bg-primary {
-  background: #017014 !important;
+  background: #167831 !important;
 }
 
 .bg-primary a,
@@ -189,7 +201,7 @@ body a {
 }
 
 .text-primary {
-  color: #017014 !important;
+  color: #167831 !important;
 }
 
 .text-secondary {
@@ -199,10 +211,13 @@ body a {
 /* NAVBAR */
 nav.navbar {
   background: #fff;
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.75);
 }
 
 nav.navbar a {
-  color: #017014 !important;
+  color: #167831 !important;
 }
 
 .navbar-brand a { 
@@ -214,7 +229,7 @@ ul.dropdown-menu {
 }
 
 ul.dropdown-menu a {
-  color: #017014;
+  color: #167831;
 }
 
 ul.dropdown-menu a:hover {

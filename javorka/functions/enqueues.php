@@ -6,7 +6,7 @@ defined( 'ABSPATH' ) || exit;
 function javorka_enqueue_scripts() {
   // CSS
   wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css', false );
-  wp_enqueue_style( 'javorka', get_stylesheet_directory_uri() . '/style.css', [], '0.1.4' );
+  wp_enqueue_style( 'javorka', get_stylesheet_directory_uri() . '/style.css', [], '0.1.5' );
 
   // JS
   wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', false );

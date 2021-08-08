@@ -77,8 +77,12 @@
 <!-- START: Study programmes -->
 <div class="container">
   <div class="row">
-
+  
     <h2 class="text-center"><?php _e( 'Pre uchádzačov' , 'javorka' ); ?></h2>
+
+    <?php if ( is_active_sidebar( 'study-programs' ) ): ?>
+      <?php dynamic_sidebar( 'study-programs' ); ?>
+    <?php endif; ?>
 
     <div class="col-sm-6 col-md-4">
       <div class="card">
