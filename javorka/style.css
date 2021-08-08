@@ -226,6 +226,12 @@ div .javorka-card {
   border: none; 
 }
 
+address span,
+.contact-info span,
+.additional-contact-info span {
+  display: block;
+}
+
 /* NAVBAR */
 nav.navbar {
   background: #fff;
