@@ -29,9 +29,10 @@ body a {
   color: #167831;
 }
 
-body a {
-	text-decoration: none !important;
-  color: #167831;
+body a:hover,
+body a:focus,
+body a:active {
+  color: #9bc971;
 }
 
 main#theme-main {
@@ -273,6 +274,15 @@ nav.navbar {
 nav.navbar a,
 footer#site-footer a {
   color: #167831 !important;
+}
+
+nav.navbar a:hover,
+nav.navbar a:focus,
+nav.navbar a:active,
+footer#site-footer a:hover,
+footer#site-footer a:focus,
+footer#site-footer a:active {
+  color: #9bc971 !important;
 }
 
 .navbar-brand a { 

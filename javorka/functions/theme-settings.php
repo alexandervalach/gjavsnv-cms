@@ -65,12 +65,7 @@ if ( !function_exists( 'javorka_wp_head' ) ) {
   function javorka_wp_head() {
     ?>
     <style>
-      /* body { padding-top: 70px !important; } */
       body.logged-in .navbar.fixed-top { top: 32px !important; }
-      
-      @media only screen and (min-width: 783px) {
-        body.logged-in .navbar.fixed-top { top: 28px !important; }
-      }
     </style>
     <?php
   }

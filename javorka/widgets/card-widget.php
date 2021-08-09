@@ -23,7 +23,7 @@ class javorka_card_widget extends WP_Widget {
         <div class="card-body">
 
           <?php if ( !empty($link) && $link != "#" ): ?>
-            <a href="<?php echo $link ?>" target="_blank" class="card-link">
+            <a href="<?php echo $link ?>" class="card-link">
               <h3 class="card-title"><?php echo $title ?></h3>
             </a>
           <?php else: ?>
