@@ -297,9 +297,11 @@ ul.dropdown-menu a {
   color: #167831;
 }
 
-ul.dropdown-menu a:hover {
-  background: #9bc971;
-  color: #fff;
+ul.dropdown-menu a:hover,
+ul.dropdown-menu a:focus,
+ul.dropdown-menu a:active {
+  background: #fff;
+  color: #9bc971;
 }
 
 .navbar button.navbar-toggler {
