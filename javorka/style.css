@@ -193,22 +193,17 @@ footer#site-footer {
 
 /* FRONT PAGE SPECIFIC STYLES */
 #social-networks {
-	/* background: url('./assets/images/cover.jpg') left top no-repeat;
-	background-size: cover;*/
   background-color: #167831;
   color: #fff;
 }
 
 #social-networks img {
   margin: 15px 10px;
-}
-
-#social-networks img {
   width: 40px;
 }
 
-
-#study-programs {
+#study-programs,
+#partners {
 	background: url('./assets/images/cover.jpg') left top no-repeat;
 	background-size: cover;
 }
@@ -261,6 +256,11 @@ address span,
 
 .site-info {
   margin-top: 10px;
+}
+
+.section-header {
+  padding-top: 20px;
+  text-align: center;
 }
 
 /* NAVBAR */

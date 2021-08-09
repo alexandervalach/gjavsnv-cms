@@ -101,7 +101,11 @@
     <div class="row">
       <div class="col-12">
         <a href="<?php echo '/pre-uchadzacov/studijne-odbory'; ?>" title="<?php _e( 'Prejsť na študijné odbory' , 'javorka' ); ?>">
-          <h2 class="text-center bg-light-transparent"><?php _e( 'Študijné odbory' , 'javorka' ); ?></h2>
+          <h2 class="text-center">
+            <span class="bg-light-transparent py-2 px-4">
+              <?php _e( 'Študijné odbory' , 'javorka' ); ?>
+            </span>
+          </h2>
         </a>
       </div>
       <?php dynamic_sidebar( 'study-programs' ); ?>
