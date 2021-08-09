@@ -13,7 +13,7 @@
     <?php wp_head(); ?>
     <!-- wp_head end -->
   </head>
-  <body <?php get_body_class(); ?> >
+  <body <?php body_class(); ?> >
     <?php wp_body_open(); ?>  
     
     <?php if(function_exists('lc_custom_header')) lc_custom_header(); else {

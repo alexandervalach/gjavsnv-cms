@@ -59,3 +59,19 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 // Changes default excerpt ending to a custom one
 function javorka_excerpt_more($more) { return '&hellip;'; }
 add_filter( 'excerpt_more', 'javorka_excerpt_more');
+
+add_action( 'wp_head', 'javorka_wp_head' );
+if ( !function_exists( 'javorka_wp_head' ) ) {
+  function javorka_wp_head() {
+    ?>
+    <style>
+      /* body { padding-top: 70px !important; } */
+      body.logged-in .navbar.fixed-top { top: 32px !important; }
+      
+      @media only screen and (min-width: 783px) {
+        body.logged-in .navbar.fixed-top { top: 28px !important; }
+      }
+    </style>
+    <?php
+  }
+}
