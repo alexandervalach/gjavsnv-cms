@@ -10,10 +10,6 @@ get_header();
   <div class="container">
     <h1><?php the_archive_title() ?></h1>
     <div class="lead text-muted col-md-8 offset-md-2 archive-description"><?php echo category_description(); ?></div> 
-    <!-- <p>
-      <a href="#" class="btn btn-primary my-2">Action</a>
-      <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-    </p> -->
   </div>
 </section>
 
@@ -21,11 +17,12 @@ get_header();
   <div class="container">
     <div class="row">
     <?php 
-        if ( have_posts() ) : 
-            while ( have_posts() ) : the_post();
+        if ( have_posts() ): 
+            while ( have_posts() ): 
+              the_post();
               get_template_part('loops/cards');
             endwhile;
-        else :
+        else:
             _e( 'Sorry, no posts matched your criteria.', 'textdomain' );
         endif;
         ?>

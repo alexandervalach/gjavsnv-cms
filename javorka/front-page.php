@@ -7,7 +7,7 @@
 
     <!-- Visible on medium screen and larger -->
     <div id="cover-photo">
-      <div class="container align-bottom">
+      <div class="container">
         <div class="cover-caption d-none d-md-block">
           <div class="cover-title">
             <h2>Gymnázium Javorová</h2>
@@ -46,15 +46,15 @@
 
 <div class="container">
   <div class="row">
-    <a href="#" title="<?php _e( 'Prejsť na aktuality' , 'javorka' ); ?>">
+    <a href="<?php echo '/aktuality'; ?>" title="<?php _e( 'Prejsť na aktuality' , 'javorka' ); ?>">
       <h2 class="text-center"><?php _e( 'Aktuality' , 'javorka' ); ?></h2>
     </a>
-    <?php 
-      $args = [ 'posts_per_page' => 4 ];
+    <?php
+      $query = new WP_Query(
+        [ 'posts_per_page' => 4 ]
+      );
 
-      $query = new WP_Query( $args );
-
-      if ( have_posts() ):
+      if ( $query->have_posts() ):
           while ( $query->have_posts() ): 
             $query->the_post();
           ?>
