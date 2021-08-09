@@ -2,25 +2,41 @@
 <?php get_header(); ?>
 
 <!-- START: Cover Photo -->
-<div class="container-fluid">
+<div class="container-fluid d-none d-md-block d-lg-block d-xl-block">
   <div class="row">
-    <div id="cover-photo">
 
-    <div class="container">
-      <div class="cover-caption d-none d-md-block home-content">
-        <div class="cover-title text-start">
-          <h2>Gymnázium Javorová</h2>
-        </div>
-        <div class="cover-text">
-          Gymnázium v Spišskej Novej Vsi so zameraním na päťročné bilingválne a osemročné štúdium
+    <!-- Visible on medium screen and larger -->
+    <div id="cover-photo">
+      <div class="container align-bottom">
+        <div class="cover-caption d-none d-md-block">
+          <div class="cover-title">
+            <h2>Gymnázium Javorová</h2>
+          </div>
+          <div class="cover-text">
+            <?php _e( 'Gymnázium v Spišskej Novej Vsi so zameraním na', 'javorka' ); ?>
+            <strong><?php _e( 'päťročné bilingválne', 'javorka' ); ?></strong>
+            <?php _e( 'a', 'javorka' ); ?>
+            <strong><?php _e( 'osemročné', 'javorka' ); ?></strong>
+            <?php _e( 'štúdium', 'javorka' ); ?>
+          </div>
         </div>
       </div>
     </div>
 
-    </div>
   </div>
 </div>
 <!-- END: Cover Photo -->
+
+<!-- Visible only on small screens -->
+<div class="container-fluid d-block d-sm-none bg-primary">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h1 style="margin-bottom: 0"><?php _e( 'Vitajte na webe Gymnázia Javorová', 'javorka' ); ?></h1>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- START: News -->
 <!-- Title for SEO and Screen Readers -->
@@ -32,9 +48,7 @@
   <div class="row">
     <h2 class="text-center"><?php _e( 'Aktuality' , 'javorka' ); ?></h2>
     <?php 
-      $args = [
-        'posts_per_page' => 3
-      ];
+      $args = [ 'posts_per_page' => 4 ];
 
       $query = new WP_Query( $args );
 
@@ -43,7 +57,7 @@
             $query->the_post();
           ?>
 
-          <div class="col d-flex">
+          <div class="col-sm-12 col-md-6 col-lg-3 d-flex">
             <div class="card javorka-card">
               <a href="<?php the_permalink() ?>" target="_self" title="<?php _e( 'Čítaj ďalej článok ', 'javorka' ) . the_title(); ?>">
                 <?php 

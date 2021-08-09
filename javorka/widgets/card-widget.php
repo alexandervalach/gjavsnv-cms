@@ -18,12 +18,12 @@ class javorka_card_widget extends WP_Widget {
     // This is where you run the code and display the output
     ?>
 
-    <div class="col d-flex">
+    <div class="col-sm-12 col-md-6 col-lg-4 d-flex">
       <div class="card javorka-card text-center">
         <div class="card-body">
 
           <?php if ( !empty($link) && $link != "#" ): ?>
-            <a href="<?php echo $link ?>" class="card-link">
+            <a href="<?php echo $link ?>" target="_blank" class="card-link">
               <h3 class="card-title"><?php echo $title ?></h3>
             </a>
           <?php else: ?>
