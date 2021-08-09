@@ -8,15 +8,15 @@
           <h2><?php _e( 'Nájdete nás aj na sociálnych sieťach', 'javorka' ); ?></h2>
         
           <a href="https://www.instagram.com/javorka.official/" target="_blank" title="<?php _e( 'Prejsť na Instagram stránku Javorky', 'javorka' ) ?>">
-            <img width="50px" src="<?php echo get_template_directory_uri() . '/assets/images/ig-logo-white.svg' ?>" class="d-inline-block" alt="<?php _e( 'Instagram logo', 'javorka' ) ?>">
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/ig-logo-white.svg' ?>" class="d-inline-block" alt="<?php _e( 'Instagram logo', 'javorka' ) ?>">
           </a>
         
           <a href="https://www.facebook.com/javorka16" target="_blank" title="<?php _e( 'Prejsť na Facebook stránku Javorky', 'javorka' ) ?>">
-            <img width="50px" src="<?php echo get_template_directory_uri() . '/assets/images/fb-logo-white.png' ?>" class="d-inline-block" alt="<?php _e( 'Facebook logo', 'javorka' ) ?>">
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/fb-logo-white.png' ?>" class="d-inline-block" alt="<?php _e( 'Facebook logo', 'javorka' ) ?>">
           </a>
 
           <a href="https://www.youtube.com/channel/UC0s0Orj5UeBRjSndoagCcMQ" target="_blank" title="<?php _e( 'Prejsť na Youtube kanál Javorky', 'javorka' ) ?>">
-            <img width="60px" src="<?php echo get_template_directory_uri() . '/assets/images/yt-logo-white.svg' ?>" class="d-inline-block" alt="<?php _e( 'Instagram logo', 'javorka' ) ?>">
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/yt-logo-white.svg' ?>" class="d-inline-block" alt="<?php _e( 'Instagram logo', 'javorka' ) ?>">
           </a>
 
         </div>

@@ -36,7 +36,7 @@ body a {
 
 main#theme-main {
   margin-top: 75px;
-  min-height: 75vh;
+  min-height: 70vh;
 }
 
 #theme-main .container {
@@ -201,6 +201,11 @@ footer#site-footer {
 #social-networks img {
   margin: 15px 10px;
 }
+
+#social-networks img {
+  width: 40px;
+}
+
 
 #study-programs {
 	background: url('./assets/images/cover.jpg') left top no-repeat;

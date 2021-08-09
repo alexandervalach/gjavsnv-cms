@@ -20,7 +20,7 @@ class javorka_contact_widget extends WP_Widget {
     <div class="col">
       <h3><?php _e( 'Kontakt', 'javorka' ); ?></h3>
       <address>
-        <strong><?php echo $title; ?></strong>
+        <span><?php echo $title; ?></span>
         <span><?php echo $street; ?></span>
         <span><?php echo $zipcode; ?>&nbsp;<?php echo $town; ?></span>
       </address>

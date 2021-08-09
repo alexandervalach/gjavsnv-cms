@@ -46,7 +46,9 @@
 
 <div class="container">
   <div class="row">
-    <h2 class="text-center"><?php _e( 'Aktuality' , 'javorka' ); ?></h2>
+    <a href="#" title="<?php _e( 'Prejsť na aktuality' , 'javorka' ); ?>">
+      <h2 class="text-center"><?php _e( 'Aktuality' , 'javorka' ); ?></h2>
+    </a>
     <?php 
       $args = [ 'posts_per_page' => 4 ];
 
@@ -98,7 +100,9 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h2 class="text-center bg-light-transparent"><?php _e( 'Formy štúdia' , 'javorka' ); ?></h2>
+        <a href="<?php echo '/pre-uchadzacov/studijne-odbory'; ?>" title="<?php _e( 'Prejsť na študijné odbory' , 'javorka' ); ?>">
+          <h2 class="text-center bg-light-transparent"><?php _e( 'Študijné odbory' , 'javorka' ); ?></h2>
+        </a>
       </div>
       <?php dynamic_sidebar( 'study-programs' ); ?>
     </div>
@@ -111,7 +115,9 @@
 <?php if ( is_active_sidebar( 'special-powers' ) ): ?>
 <div class="container">
   <div class="row">
-    <h2 class="text-center"><?php _e( 'V čom sme iní – prečo študovať u nás?', 'javorka' ); ?></h2>
+    <a href="<?php echo '/pre-uchadzacov/preco-studovat-u-nas'; ?>" title="<?php _e( 'Prejsť na stránku Prečo študovať u nás?' , 'javorka' ); ?>">
+      <h2 class="text-center"><?php _e( 'V čom sme iní – prečo študovať u nás?', 'javorka' ); ?></h2>
+    </a>
     <?php dynamic_sidebar( 'special-powers' ); ?>
   </div>
 </div>

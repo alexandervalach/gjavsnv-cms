@@ -7,13 +7,11 @@ get_header();
 
 <div class="container">
   <div class="row">
-    <div class="py-6 bg-light">
-      <div class="container text-center">
-        <h1 class="display-4"><?php the_title(); ?></h1>
-      </div>
+    <div class="col-12 text-center">
+      <h1><?php the_title(); ?></h1>
     </div>
 
-    <div class="col-md-10 offset-md-1 py-5">
+    <div class="col-12">
       <?php 
         if ( have_posts() ): 
           while ( have_posts() ) : the_post();

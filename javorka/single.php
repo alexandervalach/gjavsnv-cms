@@ -9,10 +9,10 @@ if ( have_posts() ) :
   while ( have_posts() ) : the_post();
   ?>
 
-  <article class="container p-5">
+  <article class="container">
     
     <header class="row text-center">
-      <div class="col-md-12">
+      <div class="col-sm-12">
         <!--
         <?php // if ( has_category() ): ?>
           <div class="entry-categories">
@@ -29,7 +29,7 @@ if ( have_posts() ) :
     </header>
 
     <div class="row">
-      <div class="col-md-8 offset-md-2">
+      <div class="col-sm-12">
         <?php the_content(); ?>
 
         <footer class="post-meta text-primary" id="single-post-meta">
