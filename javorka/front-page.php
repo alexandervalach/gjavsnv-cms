@@ -8,7 +8,8 @@
     <!-- Visible on medium screen and larger -->
     <div id="cover-photo">
       <div class="container">
-        <div class="cover-caption d-none d-md-block">
+
+        <div class="cover-caption bg-light-transparent d-none d-md-block">
           <div class="cover-title">
             <h2>Gymnázium Javorová</h2>
           </div>
@@ -20,6 +21,7 @@
             <?php _e( 'štúdium', 'javorka' ); ?>
           </div>
         </div>
+        
       </div>
     </div>
 
