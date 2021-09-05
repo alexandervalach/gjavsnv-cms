@@ -9,19 +9,23 @@
     <div id="cover-photo">
       <div class="container">
 
-        <div class="cover-caption bg-light-transparent d-none d-md-block">
-          <div class="cover-title">
-            <h2>Gymnázium Javorová</h2>
-          </div>
+        <div id="cover-title" class="p-absolute bg-primary d-none d-md-block">
+          <h1><?php _e( 'Gymnázium Javorová', 'javorka' ); ?></h1>
+        </div>
+
+        <?php if ( is_active_sidebar( 'study-programs' ) ): ?>
+          <a href="#study-programs" id="cover-btn" class="p-absolute d-none d-md-block">
+            <?php _e( 'Vyber si budúcnosť', 'javorka' ); ?>
+          </a>
+        <?php endif ?>
+
+        <div id="cover-description" class="p-absolute bg-darker d-none d-md-block">
           <div class="cover-text">
-            <?php _e( 'Gymnázium v Spišskej Novej Vsi so zameraním na', 'javorka' ); ?>
-            <strong><?php _e( 'päťročné bilingválne', 'javorka' ); ?></strong>
-            <?php _e( 'a', 'javorka' ); ?>
-            <strong><?php _e( 'osemročné', 'javorka' ); ?></strong>
-            <?php _e( 'štúdium', 'javorka' ); ?>
+            <span><?php _e( 'Gymnázium v Spišskej Novej Vsi', 'javorka' ); ?></span>
+            <span><?php _e( 'so zameraním na päťročné bilingválne a osemročné štúdium', 'javorka' ); ?></span>
           </div>
         </div>
-        
+
       </div>
     </div>
 
@@ -41,57 +45,55 @@
 </div>
 
 <!-- START: News -->
-<!-- Title for SEO and Screen Readers -->
-<div class="container text-center d-none">
-  <h1><?php echo get_bloginfo( 'name' ); ?></h1>
-</div>
+<div class="container-fluid" id="javorka-news">
+  <div class="container">
+    <div class="row">
+      <a href="<?php echo '/aktuality'; ?>" title="<?php _e( 'Prejsť na aktuality' , 'javorka' ); ?>">
+        <h2 class="text-center"><?php _e( 'Aktuality' , 'javorka' ); ?></h2>
+      </a>
+      <?php
+        $query = new WP_Query(
+          [ 'posts_per_page' => 4 ]
+        );
 
-<div class="container">
-  <div class="row">
-    <a href="<?php echo '/aktuality'; ?>" title="<?php _e( 'Prejsť na aktuality' , 'javorka' ); ?>">
-      <h2 class="text-center"><?php _e( 'Aktuality' , 'javorka' ); ?></h2>
-    </a>
-    <?php
-      $query = new WP_Query(
-        [ 'posts_per_page' => 4 ]
-      );
+        if ( $query->have_posts() ):
+            while ( $query->have_posts() ): 
+              $query->the_post();
+            ?>
 
-      if ( $query->have_posts() ):
-          while ( $query->have_posts() ): 
-            $query->the_post();
-          ?>
-
-          <div class="col-sm-12 col-md-6 col-lg-3 d-flex">
-            <div class="card javorka-card">
-              <a href="<?php the_permalink() ?>" target="_self" title="<?php _e( 'Čítaj ďalej článok ', 'javorka' ) . the_title(); ?>">
-                <?php 
-                  if (has_post_thumbnail()): 
-                    $image_arr = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full');
-                    ?>
-                      <img src="<?php echo $image_arr[0] ?>" class="card-img-top" alt="<?php the_title(); ?>">
-                    <?php
-                  else:
-                ?>
-                  <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/thumbnail-default.jpg' ?>" class="card-img-top" alt="<?php the_title(); ?>">
-                <?php endif; ?>   
-              </a>
-              <div class="card-body">
+            <div class="col-sm-12 col-md-6 col-lg-3 d-flex">
+              <div class="card javorka-card">
                 <a href="<?php the_permalink() ?>" target="_self" title="<?php _e( 'Čítaj ďalej článok ', 'javorka' ) . the_title(); ?>">
-                  <h5 class="card-title"><?php the_title(); ?></h5>
+                  <?php 
+                    if (has_post_thumbnail()): 
+                      $image_arr = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full');
+                      ?>
+                        <img src="<?php echo $image_arr[0] ?>" class="card-img-top" alt="<?php the_title(); ?>">
+                      <?php
+                    else:
+                  ?>
+                    <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/thumbnail-default.jpg' ?>" class="card-img-top" alt="<?php the_title(); ?>">
+                  <?php endif; ?>   
                 </a>
-                <p class="card-text">
-                  <?php the_excerpt(); ?>
-                </p>
+                <div class="card-body">
+                  <a href="<?php the_permalink() ?>" target="_self" title="<?php _e( 'Čítaj ďalej článok ', 'javorka' ) . the_title(); ?>">
+                    <h5 class="card-title"><?php the_title(); ?></h5>
+                  </a>
+                  <p class="card-text">
+                    <?php the_excerpt(); ?>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <?php
-          endwhile;
-      else:
-        _e( 'Žiadne príspevky nevyhovujú zvoleným kritériám.', 'javorka' );
-      endif;
-    ?>
+            <?php
+            endwhile;
+        else:
+          _e( 'Žiadne príspevky nevyhovujú zvoleným kritériám.', 'javorka' );
+        endif;
+      ?>
+    </div>
+
   </div>
 </div>
 <!-- END: News -->
@@ -119,12 +121,14 @@
 
 <!-- START: Special powers -->
 <?php if ( is_active_sidebar( 'special-powers' ) ): ?>
-<div class="container">
-  <div class="row">
-    <a href="<?php echo '/pre-uchadzacov/preco-studovat-u-nas'; ?>" title="<?php _e( 'Prejsť na stránku Prečo študovať u nás?' , 'javorka' ); ?>">
-      <h2 class="text-center"><?php _e( 'V čom sme iní – prečo študovať u nás?', 'javorka' ); ?></h2>
-    </a>
-    <?php dynamic_sidebar( 'special-powers' ); ?>
+<div class="container-fluid" id="special-powers">
+  <div class="container">
+    <div class="row">
+      <a href="<?php echo '/pre-uchadzacov/preco-studovat-u-nas'; ?>" title="<?php _e( 'Prejsť na stránku Prečo študovať u nás?' , 'javorka' ); ?>">
+        <h2 class="text-center"><?php _e( 'V čom sme iní – prečo študovať u nás?', 'javorka' ); ?></h2>
+      </a>
+      <?php dynamic_sidebar( 'special-powers' ); ?>
+    </div>
   </div>
 </div>
 <?php endif; ?>
