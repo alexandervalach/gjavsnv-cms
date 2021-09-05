@@ -1,7 +1,7 @@
 /*
 Theme Name: Javorka
 Author: Alexander Valach
-Version: 0.1.1
+Version: 0.1.1.2
 Requires at least: 5.8
 Tested up to: 5.8
 Requires PHP: 7.4
@@ -41,6 +41,17 @@ body a:active {
 main#theme-main {
   margin-top: 70px;
   min-height: 70vh;
+}
+
+@media all and (max-width: 768px) {
+  main#theme-main {
+    margin-top: 60px;
+    min-height: 70vh;
+  }
+}
+
+body #theme-main.bg-light {
+  background: #fff !important;
 }
 
 #theme-main .container {
@@ -195,6 +206,7 @@ footer#site-footer {
 }
 
 #cover-title h1 {
+  font-weight: bold;
   margin-bottom: 0;
 }
 
@@ -206,6 +218,7 @@ footer#site-footer {
   color: #fff;
   background: #e31e25;
   border-radius: 3px;
+  font-weight: bold;
 }
 
 #cover-btn:hover {
@@ -216,8 +229,10 @@ footer#site-footer {
   bottom: 5%;
   right: 0;
   padding: 15px;
-  padding-right: 10%;
+  padding-right: 25%;
   color: #fff;
+  font-size: 20px;
+	line-height: 38px;
 }
 
 #cover-description span {

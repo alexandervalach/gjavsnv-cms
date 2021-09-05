@@ -6,7 +6,7 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 ?>
   
-<section class="py-6 bg-light text-center">
+<section class="text-center">
   <div class="container">
     <h1><?php the_archive_title() ?></h1>
     <div class="lead text-muted col-md-8 offset-md-2 archive-description"><?php echo category_description(); ?></div> 

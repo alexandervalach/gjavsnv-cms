@@ -73,4 +73,8 @@
     } // END ELSE CASE 
     ?>
 
-<main id='theme-main'>
+<?php if (is_front_page()): ?>
+  <main id="theme-main">
+<?php else: ?>
+  <main id="theme-main" class="bg-light">
+<?php endif; ?>
