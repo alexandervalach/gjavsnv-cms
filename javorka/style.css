@@ -22,7 +22,7 @@ html {
 body {
   font: normal 16px Arial, sans-serif;
   line-height: 32px;
-  background: url('./assets/images/background.jpg') center center no-repeat;
+  background: url('./assets/images/background.jpg?nocache=14234134354') center center no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
@@ -63,6 +63,7 @@ body #theme-main.bg-light {
 }
 
 body h1 {
+  color: #4295b5;
 	font-size: 33px;
 	line-height: 57px;
 	margin-bottom: 32px;
@@ -196,7 +197,7 @@ footer#site-footer {
   height: 480px;
 }
 
-#cover-title {
+.cover-title {
   min-width: 30vw;
   top: 50px;
   left: 0;
@@ -205,12 +206,13 @@ footer#site-footer {
   color: #fff;
 }
 
-#cover-title h1 {
+.cover-title h1 {
+  color: #fff;
   font-weight: bold;
   margin-bottom: 0;
 }
 
-#cover-btn {
+.cover-btn {
   top: 200px;
   left: 490px;
   padding: 5px 15px;
@@ -221,11 +223,12 @@ footer#site-footer {
   font-weight: bold;
 }
 
-#cover-btn:hover {
+.cover-btn:hover {
   background-color: #aa161b;
+  color: #fff;
 }
 
-#cover-description {
+.cover-description {
   bottom: 5%;
   right: 0;
   padding: 15px;
@@ -234,7 +237,7 @@ footer#site-footer {
   font-size: 24px;
 }
 
-#cover-description span {
+.cover-description span {
   display: block;
   text-align: left;
 }

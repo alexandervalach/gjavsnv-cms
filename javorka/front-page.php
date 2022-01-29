@@ -9,17 +9,17 @@
     <div id="cover-photo">
       <div class="container">
 
-        <div id="cover-title" class="p-absolute bg-primary d-none d-md-block">
+        <div class="cover-title p-absolute bg-primary d-none d-md-block">
           <h1><?php _e( 'Gymnázium Javorová', 'javorka' ); ?></h1>
         </div>
 
         <?php if ( is_active_sidebar( 'study-programs' ) ): ?>
-          <a href="#study-programs" id="cover-btn" class="p-absolute d-none d-md-block">
+          <a href="#study-programs" class="cover-btn p-absolute d-none d-md-block">
             <?php _e( 'Vyber si budúcnosť', 'javorka' ); ?>
           </a>
         <?php endif ?>
 
-        <div id="cover-description" class="p-absolute bg-darker d-none d-md-block">
+        <div class="cover-description p-absolute bg-darker d-none d-md-block">
           <div class="cover-text">
             <span><?php _e( 'Gymnázium v Spišskej Novej Vsi', 'javorka' ); ?></span>
             <span><?php _e( 'so zameraním na päťročné bilingválne a osemročné štúdium', 'javorka' ); ?></span>
@@ -37,7 +37,7 @@
 <div class="container-fluid d-block d-sm-none bg-primary">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 text-center">
+      <div class="cover-title col-sm-12 text-center">
         <h1 style="margin-bottom: 0"><?php _e( 'Vitajte na webe Gymnázia Javorová', 'javorka' ); ?></h1>
       </div>
     </div>

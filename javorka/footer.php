@@ -105,6 +105,22 @@
 
 	<?php wp_footer(); ?>
 
+  <!-- Facebook Ads Script -->
+  <?php if ( is_page( 34 ) || is_page( 37 ) || is_page( 39 ) || is_page( 41 ) || is_page( 43 ) || is_page( 45 ) 
+    || is_page( 47 ) || is_page( 49 ) || is_page( 54 ) || is_page( 56 ) || is_page( 58 ) || is_page( 60 ) ): ?>
+    
+    <!-- Facebook Pixel Code -->
+    <script> 
+      !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; 
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; 
+      t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}
+      (window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '900526370635571'); fbq('track', 'PageView'); 
+    </script> 
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=900526370635571&ev=PageView&noscript=1" /></noscript> 
+    <!-- End Meta Pixel Code -->
+
+  <?php endif; ?>
+
 	</body>
 </html>
 

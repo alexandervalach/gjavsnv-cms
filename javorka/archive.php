@@ -23,7 +23,7 @@ get_header();
               get_template_part('loops/cards');
             endwhile;
         else:
-            _e( 'Sorry, no posts matched your criteria.', 'textdomain' );
+            _e( 'Hľadaným kritériám nezodpovedajú nijaké príspevky.', 'javorka' );
         endif;
         ?>
     </div>
