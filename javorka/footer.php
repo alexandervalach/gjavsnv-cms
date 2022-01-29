@@ -105,9 +105,8 @@
 
 	<?php wp_footer(); ?>
 
-  <!-- Facebook Ads Script -->
-  <?php if ( is_page( 34 ) || is_page( 37 ) || is_page( 39 ) || is_page( 41 ) || is_page( 43 ) || is_page( 45 ) 
-    || is_page( 47 ) || is_page( 49 ) || is_page( 54 ) || is_page( 56 ) || is_page( 58 ) || is_page( 60 ) ): ?>
+  <?php if ( is_page( 34 ) || is_page( 39 ) || is_page( 52 ) || is_page( 53 ) || is_page( 54 ) || is_page( 55 ) 
+    || is_page( 56 ) || is_page( 57 ) || is_page( 58 ) || is_page( 59 ) || is_page( 60 ) || is_page( 61 )  ): ?>
     
     <!-- Facebook Pixel Code -->
     <script> 
