@@ -1,7 +1,7 @@
 /*
 Theme Name: Javorka
 Author: Alexander Valach
-Version: 0.1.1.3
+Version: 0.1.2
 Requires at least: 5.8
 Tested up to: 5.8
 Requires PHP: 7.4
@@ -22,7 +22,7 @@ html {
 body {
   font: normal 16px Arial, sans-serif;
   line-height: 32px;
-  background: url('./assets/images/background.jpg?nocache=14234134354') center center no-repeat;
+  background: url('./assets/images/background-new.png') center center no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }

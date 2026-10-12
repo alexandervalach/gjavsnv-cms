@@ -96,20 +96,17 @@ if ( ! function_exists( 'javorka_setup' ) ) {
 			)
 		);
 
-		// Set up the WordPress core custom background feature.
-		/*
-		add_theme_support(
-			'custom-background',
-			apply_filters(
-				'javorka_custom_background_args',
-				array(
-					'default-color' => 'ffffff',
-					'default-image' => '',
-				)
-			)
-		);
-		*/
-		
+		// WordPress handles background uploads, preview, and safe output.
+		add_theme_support( 'custom-background', array(
+			'default-color'      => 'ffffff',
+			'default-image'      => get_template_directory_uri() . '/assets/images/background-new.png',
+			'default-position-x' => 'center',
+			'default-position-y' => 'center',
+			'default-size'       => 'cover',
+			'default-repeat'     => 'no-repeat',
+			'default-attachment' => 'fixed',
+		) );
+
 		// Set up the WordPress Theme logo feature.
 		add_theme_support( 'custom-logo' );
 

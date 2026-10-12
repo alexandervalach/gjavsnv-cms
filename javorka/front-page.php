@@ -1,14 +1,22 @@
 <?php defined( 'ABSPATH' ) || exit; ?>
 <?php get_header(); ?>
 
+<?php
+$javorka_banner_image = get_theme_mod( 'javorka_banner_image', '' );
+if ( ! $javorka_banner_image ) {
+  $javorka_banner_filename = get_theme_mod( 'javorka_banner_version', 'new' ) === 'original' ? 'cover.jpg' : 'cover-new.png';
+  $javorka_banner_image = get_template_directory_uri() . '/assets/images/' . $javorka_banner_filename;
+}
+?>
 <!-- START: Cover Photo -->
 <div class="container-fluid d-none d-md-block d-lg-block d-xl-block">
   <div class="row">
 
     <!-- Visible on medium screen and larger -->
-    <div id="cover-photo">
+    <div id="cover-photo" style="background-image: url('<?php echo esc_url( $javorka_banner_image ); ?>');">
       <div class="container">
 
+        <?php if ( get_theme_mod( 'javorka_banner_overlays', false ) ) : ?>
         <div class="cover-title p-absolute bg-primary d-none d-md-block">
           <h1><?php _e( 'Gymnázium Javorová', 'javorka' ); ?></h1>
         </div>
@@ -26,6 +34,7 @@
           </div>
         </div>
 
+        <?php endif; ?>
       </div>
     </div>
 
